@@ -1,0 +1,70 @@
+        <!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youthgram - Made in India</title>
+    <style>
+        body { background-color: #000; color: #fff; font-family: sans-serif; margin: 0; padding: 0; }
+        .header { display: flex; justify-content: space-between; padding: 15px; border-bottom: 1px solid #262626; position: sticky; top: 0; background: #000; }
+        .logo { font-size: 24px; font-weight: bold; color: #fff; letter-spacing: 1px; }
+        
+        /* प्रोफाइल सेक्शन */
+        .profile-area { padding: 20px; text-align: center; }
+        .profile-img { width: 90px; height: 90px; border-radius: 50%; border: 3px solid #e1306c; padding: 2px; }
+        
+        /* वायरल अर्निंग बोर्ड */
+        .viral-box { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); margin: 15px; padding: 20px; border-radius: 15px; text-align: center; }
+        .earnings-text { font-size: 22px; font-weight: bold; color: #fff; }
+        .sub-text { font-size: 14px; color: #eee; margin-top: 5px; }
+
+        /* भारत के लिए खास संदेश */
+        .india-pride { text-align: center; margin-top: 20px; color: #ff9933; font-weight: bold; }
+
+        .bottom-nav { position: fixed; bottom: 0; width: 100%; display: flex; justify-content: space-around; padding: 15px 0; border-top: 1px solid #262626; background: #000; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo">YOUTHGRAM</div>
+        <div style="color: #ff9933;">🇮🇳</div>
+    </div>
+
+    <div class="profile-area">
+        <div onclick="document.getElementById('upload').click()">
+            <img id="userImage" src="https://via.placeholder.com/90" class="profile-img">
+            <input type="file" id="upload" style="display:none" onchange="previewFile()">
+        </div>
+        <h3>@avinash_kumar_das</h3>
+        <p>Youthgram Creator 🚀</p>
+    </div>
+
+    <div class="viral-box">
+        <div class="earnings-text">Wallet: ₹5.00</div>
+        <div class="sub-text">Target: 1M Views = ₹20,000/Month</div>
+        <div style="font-size: 12px; margin-top: 10px; background: rgba(0,0,0,0.3); padding: 5px; border-radius: 5px;">
+            5B Followers = ₹1,00,000 Cash Reward!
+        </div>
+    </div>
+
+    <div class="india-pride">
+        ✨ अब पूरा भारत कमाएगा! ✨
+    </div>
+
+    <div class="bottom-nav">
+        <span>🏠</span><span>🔍</span><span>➕</span><span>🎬</span><span>👤</span>
+    </div>
+
+    <script>
+        function previewFile() {
+            const preview = document.getElementById('userImage');
+            const file = document.querySelector('input[type=file]').files[0];
+            const reader = new FileReader();
+            reader.onloadend = function () { preview.src = reader.result; }
+            if (file) { reader.readAsDataURL(file); }
+        }
+    </script>
+</body>
+</html>
+onloadend
